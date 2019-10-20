@@ -8,16 +8,16 @@ class MessagingAPI extends Component {
             <div className="row">
               <div className="col-sm-12 col-md-4">
                 QR code
-              <img src="qrcod.png" />
+              <img src="qrcod.png" alt="QR Code" />
               </div>
               <div className="col-sm-12 col-md-8">
                 Source code
-              <img src="code.png" />
+              <img src="code.png" alt="source code" />
               </div>
               <div className="col-sm-12">
                 Flow diagram
-              <img src="flow1.png" />
-                <img src="flow2.png" />
+              <img src="flow1.png" alt="flow diagram" />
+                <img src="flow2.png" alt="flow diagram" />
               </div>
             </div>
           </div>

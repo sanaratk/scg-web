@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GetRestaurantAPI from '../../api/getRestaurants';
+import config from "../../config";
 const API = new GetRestaurantAPI()
 
 class FindRestaurants extends Component {
@@ -46,7 +47,7 @@ class FindRestaurants extends Component {
               {this.state.data.map((object, index) => (
                 <div className="col-sm-12 col-md-3">
                   <div className="card" key={index} >
-                    <img className="card-img-top" src={`https://maps.googleapis.com/maps/api/place/photo?photoreference=${object.photos[0].photo_reference}&sensor=false&maxheight=250&maxwidth=300&key=AIzaSyAAx50iyb6a1pLEQcwdB6QAkpnAWTe4jAQ`} alt={object.name} />
+                    <img className="card-img-top" src={`https://maps.googleapis.com/maps/api/place/photo?photoreference=${object.photos[0].photo_reference}&sensor=false&maxheight=250&maxwidth=300&key=${config.keyid}`} alt={object.name} />
                     <div className="card-body">
                       <h5 className="card-title">{object.name}</h5>
                       <p className="card-text adress">{object.vicinity}</p>
