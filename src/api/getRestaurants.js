@@ -5,7 +5,6 @@ export default class GetRestaurantAPI {
     return axios
       .get('http://localhost:3030/findRestaurant')
       .then(function(response) {
-          console.log("response", response);
         if (response.status === 200 && response != null) {
           var data = response.data
           return data
@@ -14,7 +13,6 @@ export default class GetRestaurantAPI {
         }
       })
       .catch(function(error) {
-        console.log(error)
         return [] // Return empty array in case error response.
       })
   }

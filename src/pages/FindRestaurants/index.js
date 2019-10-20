@@ -11,19 +11,15 @@ class FindRestaurants extends Component {
   }
   componentDidMount() {
     const localData = localStorage.getItem('restaurant');
-    console.log('localData', localData);
     if (localData === null || localData === 'undefined') {
-      console.log('get api', localData);
 
       API.getData().then(response => {
-        console.log('Data fetched', response)
         this.setState({
           data: response.data
         });
         localStorage.setItem('restaurant', JSON.stringify(response.data));
       });
     } else {
-      console.log('get localStorage', localData);
       this.setState({
         data: JSON.parse(localData)
       })
@@ -31,7 +27,6 @@ class FindRestaurants extends Component {
   }
 
   render() {
-    console.log('this.state.data',this.state.data)
     if (this.state.data === undefined || this.state.data === []) {
       return (
         <div className="container-fluid">

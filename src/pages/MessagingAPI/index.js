@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import GetXYZAPI from '../../api/getXYZ';
 
 class MessagingAPI extends Component {
   render() {
@@ -14,6 +13,11 @@ class MessagingAPI extends Component {
               <div className="col-sm-12 col-md-8">
                 Source code
               <img src="code.png" />
+              </div>
+              <div className="col-sm-12">
+                Flow diagram
+              <img src="flow1.png" />
+                <img src="flow2.png" />
               </div>
             </div>
           </div>

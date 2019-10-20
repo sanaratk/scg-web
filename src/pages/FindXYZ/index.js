@@ -11,19 +11,15 @@ class FindXYZ extends Component {
   }
   componentDidMount() {
     const localData = localStorage.getItem('xyz');
-    console.log('localData', localData);
     if (localData === null || localData === 'undefined'){
-      console.log('get api', localData);
 
       API.getData().then(response => {
-        console.log('Data fetched', response)
         this.setState({
           data: response.data
         });
         localStorage.setItem('xyz',JSON.stringify(response.data));
       });
     }else{
-      console.log('get localStorage', localData);
       this.setState({
         data: JSON.parse(localData)
       })

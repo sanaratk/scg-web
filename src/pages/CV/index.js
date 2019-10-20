@@ -34,7 +34,7 @@ export default () => (
           <h4>2019 – PRESENT</h4>
           <h3><div className="text-position">Internal Software Develope / </div>Nexter Digital Co., Ltd.</h3>
           <p>
-            Gathering requirement, analysis, design and develop a web application with Node.jsand maintenance system for Design Connext Platform.
+            Gathering requirement, analysis, design and develop a web application with Node.js and maintenance system for Design Connext Platform.
           </p>
           <h4>2014 – 2018</h4>
           <h3><div className="text-position">Software Develope / </div>Agere Thailand Co,.Ltd</h3>
