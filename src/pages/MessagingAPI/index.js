@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react';
+import GetXYZAPI from '../../api/getXYZ';
 
-export default () => (
-  <div className="has-text-centered">
-    <section class="hero is-primary">
-      <div className="container">
-        <h1 className="title">Post Page</h1>
-      </div>
-    </section>
-  </div>
-)
+class MessagingAPI extends Component {
+  render() {
+      return (
+        <div className="container-fluid">
+          <div className="content-container">
+            <div className="row">
+              <div className="col-sm-12 col-md-4">
+                QR code
+              <img src="qrcod.png" />
+              </div>
+              <div className="col-sm-12 col-md-8">
+                Source code
+              <img src="code.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+export default MessagingAPI;
+

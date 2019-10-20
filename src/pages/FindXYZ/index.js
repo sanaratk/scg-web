@@ -1,13 +1,71 @@
-import React from 'react'
+import React, { Component} from 'react';
+import GetXYZAPI from '../../api/getXYZ';
+const API = new GetXYZAPI()
 
-export default () => (
-  <div className="has-text-centered">
-    <section class="hero is-info">
-      <div className="container">
-        <h1 className="title">Home Page</h1>
-        <h2 className="page-title">ทำ Routing ให้กับ React ด้วย React Router v4</h2>
-        
-      </div>
-    </section>
-  </div>
-)
+class FindXYZ extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: {}
+    }
+  }
+  componentDidMount() {
+    const localData = localStorage.getItem('xyz');
+    console.log('localData', localData);
+    if (localData === null || localData === 'undefined'){
+      console.log('get api', localData);
+
+      API.getData().then(response => {
+        console.log('Data fetched', response)
+        this.setState({
+          data: response.data
+        });
+        localStorage.setItem('xyz',JSON.stringify(response.data));
+      });
+    }else{
+      console.log('get localStorage', localData);
+      this.setState({
+        data: JSON.parse(localData)
+      })
+    }
+  }
+
+  render() {
+    if (this.state.data === undefined || this.state.data === []){
+      return (
+        <div className="container-fluid">
+          <div className="content-container">
+            <p>
+              X, 5, 9, 15, 23, Y, Z
+          </p>
+           Please run api
+          </div>
+        </div>
+      )
+    }else{
+      let myObj = this.state.data;
+      let indexArr = [];
+      let varArr = [];
+      for (let x in myObj) {
+        indexArr.push(x);
+        varArr.push(myObj[x]);
+      }
+      return (
+        <div className="container-fluid">
+          <div className="content-container">
+            <p>
+              X, 5, 9, 15, 23, Y, Z
+          </p>
+            {indexArr.map((object, index) => (
+              <p key={index}>{object} : {varArr[index]}</p>
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+   
+  }
+}
+export default FindXYZ;
+

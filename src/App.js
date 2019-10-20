@@ -18,7 +18,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import PageHeader from './modules/PageHeader';
-import SCGController from './routers';
+import PageFooter from './modules/PageFooter';
+import SCGController from './routers/SCGController';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
       <div>
         <PageHeader />
         <SCGController />
+        <PageFooter />
       </div>
     );
   }

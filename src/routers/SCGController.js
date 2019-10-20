@@ -5,7 +5,7 @@ import { BrowserRouter,Switch, Route } from 'react-router-dom';
 import FindXYZ from "../pages/FindXYZ";
 import CV from '../pages/CV'
 import MessagingAPI from "../pages/MessagingAPI";
-import Restaurants from "../pages/Restaurants";
+import Restaurants from "../pages/FindRestaurants";
 
 const SCGController = () => (
   <BrowserRouter>

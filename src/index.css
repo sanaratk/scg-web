@@ -11,7 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.container{
-  min-height: 250px;
-  background-color: red;
+.navbar{
+  background-color: lightskyblue;
+}
+.navbar-brand{
+  color: darkblue;
+}
+.page-footer{
+  background-color:  lightsteelblue;
+}
+.page-footer a{
+  font-size: 2em;
+  color: white;
+}
+.container-fluid{
+  
+  padding: 30px !important;
+}
+.content-container{
+  border: solid lightskyblue 1px;
+  padding: 15px;
+  min-height: 77vh;
+}
+.card{
+  margin-bottom: 20px;
+}
+.card img{
+  height: 250px;
+}
+.card-text.adress{
+  min-height: 60px;
+}
+.text-position{
+  display: inline;
+  color: darkcyan;
 }
